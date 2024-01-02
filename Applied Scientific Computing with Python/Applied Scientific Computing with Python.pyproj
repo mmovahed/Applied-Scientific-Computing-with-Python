@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>1b1dca1c-1acd-48d2-a9c5-a59fd5e4d12a</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>DE\RK4.py</StartupFile>
+    <StartupFile>DE\AB2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DE\AB2.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DE\RK4.py" />
   </ItemGroup>
   <ItemGroup>
