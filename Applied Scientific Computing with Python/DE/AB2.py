@@ -17,14 +17,19 @@ def ab2(fcn,a,b,y0,N):
     k2 = fcn( x[0] + h , y[0] + h * k1 )
     y [1] = y[0] + h*( k1 + k2 ) / 2
     f [1] = fcn(x[1],y[1])
-    for k in range (1,N) :
-        y [k+1] = y [k] + h * ( 3 * f[k] - f[k-1]) /2
-        f [k+1] = fcn(x[k+1] , y[k+1])
+    #for k in range (1,N) :
+    #    y [k+1] = y [k] + h * ( 3 * f[k] - f[k-1]) /2
+    #    f [k+1] = fcn(x[k+1] , y[k+1])
+    for k in range ( 1 ,N) :
+        y [ k + 1 ] = y[k] + h * ( 3 * f[k] - f[ k-1]) / 2
+        f [ k + 1 ] = fcn (x[k+1] , y[k+1])
+        y [ k + 1 ] = y[k] + h * ( 5 * f [ k + 1 ] + 8 * f[k] - f[k-1]) / 12
+        f [ k + 1 ] = fcn(x[k+1] , y[k+1])
     return x , y
 
 x , y = ab2(func,1,5,1,100)
 plt.plot(x, y)
-plt.title('The Adams–Bashforth two-step method method RK4')
+plt.title('The Adams–Bashforth two-step method method')
 plt.xlabel('X', fontsize = 18)
 plt.ylabel('Y', fontsize = 18)
 plt.show()
