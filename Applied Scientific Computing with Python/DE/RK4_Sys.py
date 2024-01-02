@@ -29,7 +29,8 @@ def RK4_sys(fcn,a,b,y0,N):
 RF0 = np.array([500 , 200])
 
 x , y =RK4_sys(predprey,1,5,RF0,100)
-plt.plot(x, y)
+#plt.plot(x, y)
+plt.plot(y[:,1], y[:,0])
 plt.title('The classical Runge–Kutta fourth-order method RK4')
 plt.xlabel('X', fontsize = 18)
 plt.ylabel('Y', fontsize = 18)
