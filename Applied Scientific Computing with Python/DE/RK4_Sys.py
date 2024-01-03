@@ -37,7 +37,6 @@ x , y =RK4_sys(predprey,0,5,RF0,100)
 #plt.title('The classical Runge–Kutta fourth-order method RK4')
 #plt.xlabel('X', fontsize = 18)
 #plt.ylabel('Y', fontsize = 18)
-#plt.zlabel('Y', fontsize = 18)
 #plt.show()
 
 fig = plt.figure()
